@@ -8,7 +8,11 @@
 
 import UIKit
 
+@IBDesignable
 class PushButton: UIButton {
+    
+    @IBInspectable var fillColor: UIColor = .green
+    @IBInspectable var isAddButton: Bool = true
     
     private struct Constants {
         static let plusLineWidth: CGFloat = 3.0
@@ -26,17 +30,21 @@ class PushButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: rect)
-        UIColor.blue.setFill()
+        fillColor.setFill()
         path.fill()
         
         let plusWidth: CGFloat = min(bounds.width, bounds.height) * Constants.plusButtonScale
         let halfPlusWidth: CGFloat = plusWidth / 2
         let plusPath = UIBezierPath()
         plusPath.lineWidth = Constants.plusLineWidth
-        plusPath.move(to: CGPoint(x: halfWidth - halfPlusWidth, y: halfHeight))
-        plusPath.addLine(to: CGPoint(x: halfWidth + halfPlusWidth, y: halfHeight))
+        // halfPointShift - use to more accurate render pixels on older diveces (the half-filled pixels with a color half way between the two colors, and the line looks fuzzy)
+        plusPath.move(to: CGPoint(x: halfWidth - halfPlusWidth + Constants.halfPointShift, y: halfHeight + Constants.halfPointShift))
+        plusPath.addLine(to: CGPoint(x: halfWidth + halfPlusWidth + Constants.halfPointShift, y: halfHeight + Constants.halfPointShift))
+        if isAddButton {
+            plusPath.move(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight - halfPlusWidth + Constants.halfPointShift))
+            plusPath.addLine(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight + halfPlusWidth + Constants.halfPointShift))
+        }
         UIColor.white.setStroke()
         plusPath.stroke()
     }
-
 }
