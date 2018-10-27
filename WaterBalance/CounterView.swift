@@ -20,11 +20,18 @@ class CounterView: UIView {
         }
     }
     
-    @IBInspectable var counter: Int = 3
+    @IBInspectable var counter: Int = 0 {
+        didSet {
+            if counter <= Constants.numberOfGlasses {
+                setNeedsDisplay()
+            }
+        }
+    }
     @IBInspectable var outlineColor: UIColor = .blue
     @IBInspectable var counterColor: UIColor = .orange
     
     override func draw(_ rect: CGRect) {
+        // center filled arc
         let center = CGPoint(x: bounds.width / 2 , y: bounds.height / 2)
         let diameter: CGFloat = max(bounds.width, bounds.height)
         let startAngle: CGFloat = 3 * .pi / 4
@@ -33,5 +40,18 @@ class CounterView: UIView {
         path.lineWidth = Constants.arcWidth
         counterColor.setStroke()
         path.stroke()
+        
+        // arc outlines
+        let arcAngle: CGFloat = 2 * .pi - startAngle + endAngle
+        let arcLengthPerGlass = arcAngle / CGFloat(Constants.numberOfGlasses)
+        let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
+        let outlinePath = UIBezierPath(arcCenter: center, radius: diameter / 2 - Constants.halfOfLineWidth, startAngle: startAngle, endAngle: outlineEndAngle, clockwise: true)
+        outlinePath.addArc(withCenter: center, radius: diameter / 2 - Constants.arcWidth + Constants.halfOfLineWidth, startAngle: outlineEndAngle, endAngle: startAngle, clockwise: false)
+        outlinePath.close()
+        outlineColor.setStroke()
+        outlinePath.lineWidth = Constants.lineWidth
+        outlinePath.stroke()
+        
+        
     }
 }
