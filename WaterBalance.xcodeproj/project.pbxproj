@@ -14,6 +14,7 @@
 		87E2DD0B2180EBD0003607F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E2DD092180EBD0003607F2 /* LaunchScreen.storyboard */; };
 		87E2DD132180EBF5003607F2 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2DD122180EBF5003607F2 /* PushButton.swift */; };
 		87E8ACD6218390400020505B /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8ACD5218390400020505B /* CounterView.swift */; };
+		87E8ACD82184871E0020505B /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E8ACD72184871E0020505B /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		87E2DD0C2180EBD0003607F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87E2DD122180EBF5003607F2 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		87E8ACD5218390400020505B /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		87E8ACD72184871E0020505B /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				87E2DD022180EBCE003607F2 /* ViewController.swift */,
 				87E2DD122180EBF5003607F2 /* PushButton.swift */,
 				87E8ACD5218390400020505B /* CounterView.swift */,
+				87E8ACD72184871E0020505B /* GraphView.swift */,
 				87E2DD042180EBCE003607F2 /* Main.storyboard */,
 				87E2DD072180EBD0003607F2 /* Assets.xcassets */,
 				87E2DD092180EBD0003607F2 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E8ACD82184871E0020505B /* GraphView.swift in Sources */,
 				87E2DD032180EBCE003607F2 /* ViewController.swift in Sources */,
 				87E2DD012180EBCE003607F2 /* AppDelegate.swift in Sources */,
 				87E2DD132180EBF5003607F2 /* PushButton.swift in Sources */,
