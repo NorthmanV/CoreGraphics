@@ -61,11 +61,20 @@
                                                 <color key="textColor" red="0.28235294117647058" green="0.5490196078431373" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ukh-yX-Ka8" customClass="MedalView" customModule="WaterBalance" customModuleProvider="target">
+                                                <rect key="frame" x="75" y="158" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="8eE-Ou-1vy"/>
+                                                    <constraint firstAttribute="height" constant="80" id="ct6-Pd-CzC"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="ukh-yX-Ka8" firstAttribute="centerX" secondItem="pjX-L9-qol" secondAttribute="centerX" id="CAe-m0-w1C"/>
                                             <constraint firstAttribute="width" constant="230" id="SWg-nD-4in"/>
                                             <constraint firstItem="NzF-iW-2i9" firstAttribute="centerX" secondItem="pjX-L9-qol" secondAttribute="centerX" id="ee7-Ee-vyS"/>
+                                            <constraint firstItem="ukh-yX-Ka8" firstAttribute="top" secondItem="NzF-iW-2i9" secondAttribute="bottom" constant="20" id="i1g-lh-x8L"/>
                                             <constraint firstItem="NzF-iW-2i9" firstAttribute="centerY" secondItem="pjX-L9-qol" secondAttribute="centerY" id="j0s-ac-JSz"/>
                                             <constraint firstAttribute="height" constant="230" id="s2j-tb-oJW"/>
                                         </constraints>
@@ -264,6 +273,7 @@
                         <outlet property="counterView" destination="pjX-L9-qol" id="XZE-iA-a26"/>
                         <outlet property="graphView" destination="jm2-TG-mfm" id="yj4-Vi-t4c"/>
                         <outlet property="maxLabel" destination="zqA-LC-Ci1" id="FD5-hY-uDv"/>
+                        <outlet property="medalView" destination="ukh-yX-Ka8" id="d09-a9-DQd"/>
                         <outlet property="weekdaysStackView" destination="faz-xV-zF9" id="qyl-wg-1Br"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var averageLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var weekdaysStackView: UIStackView!
+    @IBOutlet weak var medalView: MedalView!
     
     var isGraphViewShowing = false
     
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         if isGraphViewShowing {
             containerViewTap(nil)
         }
+        checkTotal()
     }
     
     @IBAction func containerViewTap(_ sender: UITapGestureRecognizer?) {
@@ -70,6 +72,14 @@ class ViewController: UIViewController {
             if let date = calendar.date(byAdding: .day, value: -i, to: today), let label = weekdaysStackView.arrangedSubviews[maxDayIndex - i] as? UILabel {
                 label.text = String(formatter.string(from: date).prefix(1))
             }
+        }
+    }
+    
+    func checkTotal() {
+        if counterView.counter >= 8 {
+            medalView.showMedal(true)
+        } else {
+            medalView.showMedal(false)
         }
     }
     

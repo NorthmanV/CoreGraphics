@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8799399F218DBD32001020A1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799399E218DBD32001020A1 /* BackgroundView.swift */; };
+		879939A1218F5876001020A1 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879939A0218F5876001020A1 /* MedalView.swift */; };
 		87E2DD012180EBCE003607F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2DD002180EBCE003607F2 /* AppDelegate.swift */; };
 		87E2DD032180EBCE003607F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2DD022180EBCE003607F2 /* ViewController.swift */; };
 		87E2DD062180EBCE003607F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87E2DD042180EBCE003607F2 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8799399E218DBD32001020A1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		879939A0218F5876001020A1 /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 		87E2DCFD2180EBCE003607F2 /* WaterBalance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterBalance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E2DD002180EBCE003607F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E2DD022180EBCE003607F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				87E8ACD5218390400020505B /* CounterView.swift */,
 				87E8ACD72184871E0020505B /* GraphView.swift */,
 				8799399E218DBD32001020A1 /* BackgroundView.swift */,
+				879939A0218F5876001020A1 /* MedalView.swift */,
 				87E2DD042180EBCE003607F2 /* Main.storyboard */,
 				87E2DD072180EBD0003607F2 /* Assets.xcassets */,
 				87E2DD092180EBD0003607F2 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				8799399F218DBD32001020A1 /* BackgroundView.swift in Sources */,
 				87E8ACD82184871E0020505B /* GraphView.swift in Sources */,
+				879939A1218F5876001020A1 /* MedalView.swift in Sources */,
 				87E2DD032180EBCE003607F2 /* ViewController.swift in Sources */,
 				87E2DD012180EBCE003607F2 /* AppDelegate.swift in Sources */,
 				87E2DD132180EBF5003607F2 /* PushButton.swift in Sources */,
